@@ -498,8 +498,8 @@ export default function CalendarScheduleApp() {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-6 py-6">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+      <div className="container mx-auto px-4 sm:px-6 py-4 sm:py-6">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 lg:gap-6">
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="space-y-6">
