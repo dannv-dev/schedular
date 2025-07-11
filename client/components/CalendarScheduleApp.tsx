@@ -353,13 +353,13 @@ export default function CalendarScheduleApp() {
             </div>
 
             <div className="flex items-center gap-2 sm:gap-3 w-full sm:w-auto">
-              <div className="relative">
+              <div className="relative flex-1 sm:flex-none">
                 <Search className="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground" />
                 <Input
                   placeholder="Search events..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-10 w-64"
+                  className="pl-10 w-full sm:w-64"
                 />
               </div>
 
@@ -367,8 +367,8 @@ export default function CalendarScheduleApp() {
                 value={selectedCategory}
                 onValueChange={setSelectedCategory}
               >
-                <SelectTrigger className="w-32">
-                  <Filter className="w-4 h-4 mr-2" />
+                <SelectTrigger className="w-24 sm:w-32">
+                  <Filter className="w-4 h-4 mr-1 sm:mr-2" />
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
@@ -385,9 +385,10 @@ export default function CalendarScheduleApp() {
                 onOpenChange={setIsCreateEventOpen}
               >
                 <DialogTrigger asChild>
-                  <Button className="gap-2">
+                  <Button className="gap-1 sm:gap-2 whitespace-nowrap">
                     <Plus className="w-4 h-4" />
-                    New Event
+                    <span className="hidden sm:inline">New Event</span>
+                    <span className="sm:hidden">New</span>
                   </Button>
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-md">
