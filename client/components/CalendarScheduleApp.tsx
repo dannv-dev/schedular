@@ -577,7 +577,7 @@ export default function CalendarScheduleApp() {
           </div>
 
           {/* Main Calendar View */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-3 order-1 lg:order-2">
             <Card>
               <CardHeader className="flex flex-row items-center justify-between">
                 <CardTitle className="text-xl">
