@@ -235,15 +235,17 @@ export default function CalendarScheduleApp() {
         {weekDays.map((day) => (
           <div
             key={day.toISOString()}
-            className="border rounded-lg p-2 bg-card"
+            className="border rounded-lg p-2 bg-card min-h-[200px] sm:min-h-[600px]"
           >
             <div
-              className={`text-center mb-2 p-2 rounded ${isToday(day) ? "bg-primary text-primary-foreground" : ""}`}
+              className={`text-center mb-2 p-1 sm:p-2 rounded ${isToday(day) ? "bg-primary text-primary-foreground" : ""}`}
             >
               <div className="text-xs font-medium">{format(day, "EEE")}</div>
-              <div className="text-lg font-bold">{format(day, "d")}</div>
+              <div className="text-sm sm:text-lg font-bold">
+                {format(day, "d")}
+              </div>
             </div>
-            <ScrollArea className="h-[480px]">
+            <ScrollArea className="h-[140px] sm:h-[480px]">
               {getEventsForDate(day).map((event) => (
                 <div
                   key={event.id}
