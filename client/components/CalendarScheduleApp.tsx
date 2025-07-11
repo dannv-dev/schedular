@@ -231,7 +231,7 @@ export default function CalendarScheduleApp() {
     const weekDays = eachDayOfInterval({ start: weekStart, end: weekEnd });
 
     return (
-      <div className="grid grid-cols-7 gap-1 h-[600px]">
+      <div className="grid grid-cols-1 sm:grid-cols-7 gap-1 h-[600px] overflow-auto">
         {weekDays.map((day) => (
           <div
             key={day.toISOString()}
