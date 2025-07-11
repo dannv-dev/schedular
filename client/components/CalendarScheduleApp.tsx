@@ -487,7 +487,11 @@ export default function CalendarScheduleApp() {
                         </SelectContent>
                       </Select>
                     </div>
-                    <Button onClick={handleCreateEvent} className="w-full">
+                    <Button
+                      onClick={handleCreateEvent}
+                      className="w-full"
+                      disabled={!newEvent.title.trim()}
+                    >
                       Create Event
                     </Button>
                   </div>
