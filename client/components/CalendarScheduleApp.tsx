@@ -167,6 +167,10 @@ export default function CalendarScheduleApp() {
   };
 
   const handleCreateEvent = () => {
+    if (!newEvent.title.trim()) {
+      return; // Basic validation
+    }
+
     const event: Event = {
       id: Date.now().toString(),
       ...newEvent,
