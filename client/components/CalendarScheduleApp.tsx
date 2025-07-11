@@ -512,8 +512,8 @@ export default function CalendarScheduleApp() {
           {/* Sidebar */}
           <div className="lg:col-span-1 order-2 lg:order-1">
             <div className="space-y-4 lg:space-y-6">
-              {/* Mini Calendar */}
-              <Card>
+              {/* Mini Calendar - Hidden on mobile, shown on larger screens */}
+              <Card className="hidden lg:block">
                 <CardContent className="p-4">
                   <Calendar
                     mode="single"
