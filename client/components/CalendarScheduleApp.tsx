@@ -311,21 +311,25 @@ export default function CalendarScheduleApp() {
     >
       {/* Header */}
       <div className="border-b bg-card/50 backdrop-blur-sm sticky top-0 z-10">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
+        <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div className="flex items-center gap-2 sm:gap-4 w-full sm:w-auto">
               <div className="flex items-center gap-2">
-                <CalendarIcon className="w-8 h-8 text-primary" />
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
+                <CalendarIcon className="w-6 sm:w-8 h-6 sm:h-8 text-primary" />
+                <h1 className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent">
                   Schedule
                 </h1>
               </div>
-              <Separator orientation="vertical" className="h-6" />
-              <div className="flex items-center gap-2">
+              <Separator
+                orientation="vertical"
+                className="h-6 hidden sm:block"
+              />
+              <div className="flex items-center gap-1 sm:gap-2">
                 <Button
                   variant={viewMode === "month" ? "default" : "outline"}
                   size="sm"
                   onClick={() => setViewMode("month")}
+                  className="text-xs sm:text-sm"
                 >
                   Month
                 </Button>
@@ -333,6 +337,7 @@ export default function CalendarScheduleApp() {
                   variant={viewMode === "week" ? "default" : "outline"}
                   size="sm"
                   onClick={() => setViewMode("week")}
+                  className="text-xs sm:text-sm"
                 >
                   Week
                 </Button>
@@ -340,13 +345,14 @@ export default function CalendarScheduleApp() {
                   variant={viewMode === "day" ? "default" : "outline"}
                   size="sm"
                   onClick={() => setViewMode("day")}
+                  className="text-xs sm:text-sm"
                 >
                   Day
                 </Button>
               </div>
             </div>
 
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 sm:gap-3 w-full sm:w-auto">
               <div className="relative">
                 <Search className="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground" />
                 <Input
