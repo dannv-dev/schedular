@@ -558,8 +558,8 @@ export default function CalendarScheduleApp() {
               {/* Upcoming Events */}
               <Card>
                 <CardHeader>
-                  <CardTitle className="text-lg flex items-center gap-2">
-                    <Clock className="w-5 h-5" />
+                  <CardTitle className="text-base sm:text-lg flex items-center gap-2">
+                    <Clock className="w-4 sm:w-5 h-4 sm:h-5" />
                     Upcoming
                   </CardTitle>
                 </CardHeader>
